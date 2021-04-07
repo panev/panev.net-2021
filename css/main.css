@@ -801,11 +801,6 @@ section p {
 
 /* WORK SECTION */
 
-#work {
-	grid-template-columns: var(--l-part) var(--l-part) var(--l-part) var(--l-part) var(--l-part) var(--l-part);
-	column-gap: 0;
-}
-
 #work p {
 	margin-bottom: var(--v-headspace);
 }
@@ -817,58 +812,43 @@ section p {
 	padding: 0;
 	display: grid;
 	grid-template-columns: var(--l-part) var(--l-part) var(--l-part) var(--l-part) var(--l-part) var(--l-part);
+	column-gap: 20px;
+	margin-left: -50px;
 }
 
 .work-list li {
-	background: #fcfcfc;
+	background: #fff;
 	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
 	border-radius: var(--v-base);
-	/*height: var(--v-chunky);*/
 	border: 1px solid rgba(0,0,0,0);
 	position: relative;
 	grid-column: span 3;
 	margin-bottom: var(--v-base);
 	display: block;
-	grid-template-columns: var(--v-chunky) auto var(--v-fat);
-	grid-template-rows: 50% 50%;
 	transition: 0.3s;
 	overflow: hidden;
 	transform-origin: center;
-
-}
-
-
-/* inactive list / comming soon */
-.work-list li.inactive .thumbnail {
-	background: none;
-}
-
-.work-list li.inactive:hover,
-.work-list li.inactive {
-	background: none;
-	transform: none;
-	box-shadow: none;
-	border: none;
-}
-
-.work-list li.inactive h4,
-.work-list li.inactive h5 {
-	opacity: 0.75;
 }
 
 .work-list a {
-	position: absolute;
-	top: 0; right: 0; bottom: 0; left: 0;
-	z-index: 500;
+	display: inline-block;
+	padding: 20px;
+	width: 100%;
+	box-sizing: border-box;
 }
 
-.work-list a span {
+.work-list a .button-arrow {
 	opacity: 0;
 }
 
 .work-list a:focus {
 	background: var(--c-high);
 	opacity: 0.08;
+}
+
+.work-list header {
+	height: 48px;
+	vertical-align: middle;
 }
 
 .work-list .thumbnail {
@@ -879,10 +859,6 @@ section p {
 	display: inline-block;
 	background: var(--c-lite);
 	border-radius: 50%;
-	grid-column: 1 / 1;
-	grid-row: 1 / 3;
-	align-self: center;
-	justify-self: center;
 	transition: 0.5s;
 	position: relative;
 	z-index: 0;
@@ -907,32 +883,24 @@ section p {
 }
 
 .work-list h4 {
-	display: block;
+	display: inline-block;
 	font-size: var(--v-base-plus);
 	font-weight: 700;
 	vertical-align: top;
-	grid-column: 2 / 2;
-	grid-row: 1 / 1;
-	align-self: start;
-	margin-top: var(--v-base);
+	width: 70%;
+	margin-left: var(--v-half);
 	transition: 0.3s;
 	position: relative;
 	z-index: 5;
+	box-sizing: border-box;
 }
 
-.work-list h5 {
-	display: inline-block;
-	position: relative;
-	z-index: 5;
-	font-size: var(--v-base);
-	font-weight: 400;
+.work-list h4 span {
+	display: block;
 	color: var(--c-medi);
-	vertical-align: bottom;
-	grid-column: 2 / 2;
-	grid-row: 2 / 3;
-	align-self: end;
-	transition: 0.3s;
-	margin-bottom: var(--v-base);
+	font-weight: 500;
+	font-size: var(--v-base);
+	margin-top: 4px;
 }
 
 .work-list .button-text {
@@ -970,6 +938,11 @@ section p {
 
 .work-list li:hover .thumbnail {
 	background: var(--c-high);
+}
+
+
+.work-list li:hover h4 {
+	color: var(--c-high);
 }
 
 /* CONTACT SECTION */
@@ -1056,7 +1029,7 @@ footer {
 		/* sizes */
 		--l-base: 100vw;
 		--l-cozy: 100vw;
-		--l-part: 0px;
+		--l-part: 100vw;
 	}
 
 	.hello-separator,
@@ -1081,12 +1054,19 @@ footer {
 	}
 
 	section {
-		margin-bottom: var(--v-chunky)
+		display: grid;
+		margin-bottom: var(--v-chunky);
+		grid-template-columns: 100vw;
+		grid-template-areas: "cozy" "full";
 	}
 
 	section p {
 		padding: 0 var(--v-spacious);
 		margin-bottom: var(--v-base);
+	}
+
+	section h3 {
+		grid-column: 1 / 1;
 	}
 
 	section .button-text {
@@ -1097,16 +1077,24 @@ footer {
 		height: 480px;
 	}
 
+	.work-list {
+		grid-template-columns: 100vw;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
 	.work-list li {
 		height: var(--v-fat);
 		background: #fff;
-			grid-template-rows: 40% 60%;
-			border-radius: 0;
+		grid-template-rows: 40% 60%;
+		border-radius: 0;
+		grid-column: span 1;
+		margin: 0 0 var(--v-base);
 	}
 
 	.work-list li.inactive {
 		height: var(--v-chunky);
-			grid-template-rows: 50% 50%;
+		grid-template-rows: 50% 50%;
 	}
 
 	.work-list li h4 {
@@ -1137,6 +1125,10 @@ footer {
 
 	.weekday-greeting {
 		padding: 0 var(--v-headspace);
+	}
+
+	footer {
+		display: block;
 	}
 
 }
