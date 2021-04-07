@@ -21,6 +21,7 @@
 	/* sizes */
 	--l-base: 720px;
 	--l-cozy: 480px;
+	--l-half: 360px;
 	--l-part: 120px;
 
 	/* vertical nuggets */
@@ -727,8 +728,8 @@ section h1 {
 }
 
 section h3 {
-	grid-column: cozy;
-	justify-self: center;
+    grid-column: 3 / span 2;
+    justify-self: center;
 }
 
 section p {
@@ -771,12 +772,12 @@ section p {
 }
 
 .ribbon-left {
-	grid-column: 1 / 2;
+	grid-column: 1 / span 2;
 	align-self: center;
 }
 
 .ribbon-right {
-	grid-column: 3 / 3;
+    grid-column: 5 / span 2;
 	align-self: center;
 	justify-self: end;
 }
@@ -800,43 +801,42 @@ section p {
 
 /* WORK SECTION */
 
+#work {
+	grid-template-columns: var(--l-part) var(--l-part) var(--l-part) var(--l-part) var(--l-part) var(--l-part);
+	column-gap: 0;
+}
+
 #work p {
 	margin-bottom: var(--v-headspace);
 }
 
 .work-list {
-	grid-column: full;
+	grid-column: span 6;
 	list-style: none;
 	margin-top: 0;
 	padding: 0;
+	display: grid;
+	grid-template-columns: var(--l-part) var(--l-part) var(--l-part) var(--l-part) var(--l-part) var(--l-part);
 }
 
 .work-list li {
 	background: #fcfcfc;
 	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
 	border-radius: var(--v-base);
-	height: var(--v-chunky);
+	/*height: var(--v-chunky);*/
 	border: 1px solid rgba(0,0,0,0);
 	position: relative;
+	grid-column: span 3;
 	margin-bottom: var(--v-base);
-	display: grid;
+	display: block;
 	grid-template-columns: var(--v-chunky) auto var(--v-fat);
-		grid-template-rows: 50% 50%;
-		transition: 0.3s;
-		overflow: hidden;
-		transform-origin: center;
+	grid-template-rows: 50% 50%;
+	transition: 0.3s;
+	overflow: hidden;
+	transform-origin: center;
 
 }
 
-/* List rotatation idea: parked for now */
-
-/*	.work-list li:nth-child(odd) {
-	transform: translateY(0px) scale(1) rotate(2deg);
-}
-
-	.work-list li:nth-child(even) {
-	transform: translateY(0px) scale(1) rotate(-2deg);
-}*/
 
 /* inactive list / comming soon */
 .work-list li.inactive .thumbnail {
