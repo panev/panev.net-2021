@@ -274,9 +274,9 @@ nav a:focus {
 section, footer {
 	width: var(--l-base);
 	display: grid;
-	grid-template-columns: var(--l-part) var(--l-cozy) var(--l-part);
+	grid-template-columns: var(--l-part) var(--l-part) var(--l-part) var(--l-part) var(--l-part) var(--l-part);
 	justify-self: center;
-	grid-template-areas: ". cozy ." "full full full";
+	grid-template-areas: ". cozy cozy cozy cozy ." "full full full full full full";
 	margin-bottom: var(--v-fat);
 }
 
