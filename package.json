@@ -1,0 +1,22 @@
+{
+  "name": "eleventy-starter",
+  "version": "1.0.0",
+  "description": "Simple eleventy starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panev/eleventy-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/panev/eleventy-starter/issues"
+  },
+  "homepage": "https://github.com/panev/eleventy-starter#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
