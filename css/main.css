@@ -98,10 +98,23 @@ body {
 	bottom: -4px;
 }
 
+.cs h1 {
+	text-align: center;
+	margin-top: var(--v-chunky);
+	margin-bottom: var(--v-chunky);
+}
+
 h1 {
 	font-family: 'Comfortaa', 'Helvetica', 'Arial', sans-serif;
 	font-weight: 700;
 	font-size: var(--v-headspace);
+	margin: var(--v-spacious) 0;
+}
+
+h2 {
+	font-family: 'Comfortaa', 'Helvetica', 'Arial', sans-serif;
+	font-weight: 700;
+	font-size: var(--v-spacious-plus);
 	margin: var(--v-spacious) 0;
 }
 
@@ -281,6 +294,10 @@ section, footer {
 	justify-self: center;
 	grid-template-areas: ". cozy cozy cozy cozy ." "full full full full full full";
 	margin-bottom: var(--v-fat);
+}
+
+section.cs {
+	display: block;
 }
 
 #hello {

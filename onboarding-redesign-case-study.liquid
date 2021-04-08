@@ -4,3 +4,100 @@ title: 'Redesigning Skrills onboarding'
 ---
 
 {% include components/section-header %}
+
+
+<section class="cs">
+
+	<h1>How we redesigned Skrill's onboarding flow</h1>
+	<h2>Overview</h2>
+
+	<p>At Skrill, our registration and onboarding process was sub-optimal. We identified this by looking at converstion rate numbers and doing a series of user interviews.</p>
+
+	<p><strong>Our goal was to decrease the drop-off rate in our onboarding process.</strong></p>
+
+	<h2>My role</h2>
+
+	<ul>
+		<li>Work with user researchers to gather insights in areas people were </li>struggling with.
+		<li>Work with data analysts to review quantitative metrics in key points </li>in the user journey.
+		<li>Consolidate data and create a hypothesis for improvement</li>
+		<li>Present ideas to stakeholders</li>
+		<li>Leverage our design system to create a usable UI</li>
+		<li>Hand-off to developers and aid implementation</li>
+		<li>Work with product managers to plan, roll-out and oversee testing</li>
+	</ul>
+	<h2>Identifying the problem</h2>
+
+	<p>Our onboarding was burdoned by legacy features, technology and regulations. <br>We knew things could be improved and were further convinced by looking at the data.</p>
+
+	- Drop-off chart
+
+	<p>To gather a complete picture, we conducted a series of user interviews. What people told us matched what the funnel data was showing, providing more detail and nuance to the problem.</p>
+
+	- User snippets
+
+	<p>We discovered that the user journey was very fragmented, did not follow a concise, predictable or logical flow and this confused and frustrated users, causing them to abbandon their main task – which usually was sending money to someone else.</p>
+
+	<h2>An iterative approach</h2>
+
+	<p>Our digital wallet provided many value props, each of which had it's own little prerequisites and flows.</p>
+
+	<p>Instead of opting for a complete overhaul, we decided to go for the least amount changes that could generate the most improvement and could be tested and observed – an MVP, if you will.</p>
+
+	<h2>Forming a hypothesis for improvement</h2>
+
+	<p>Looking at the data, a few things were apparent:</p>
+	<ul>
+		<li>We did not do a good job of building a mental model for our users – people did not know what to expect at each step of their journey.</li>
+		    - Lite dashboard
+		<li>Increased context switching and deviations from their main task confused and frustrated users.</li>
+	   	 - Context switch img
+	</ul>
+
+	<p>The idea to improve this was to reduce context switching and tweak the users perception that every step they take before depositing is part of an 'account setup' phase.</p>
+
+	- Anti-context switch img
+
+	<p>We could achieve this by</p>
+	<ol>
+		<li>Setting expectations at the begining – what is necessary to do the thing I'm here to do.</li>
+		<li>Make the system /  interface provide feedback at each step in the journy - a stepper.</li>
+	- Wireframe images
+	</ol>
+	<p>Beyond these optimisations, the idea evolved to capturing the user's intent at the begining, providing relevant information and guiding people all the way beyond their account set-up to their main goal.</p>
+
+	- Blue wireframe images
+
+	<h2>Testing</h2>
+
+	<p>A few tests were done on usertesting.com to gather perception and validate there are no major gaps in our concept.</p>
+
+	<p>Due to the fiscal nature of our product, we wanted to perform live tests on production with our customers. We did this using Adobe Target in a few key regions – aproximately half of the people would be shown the new version of the onboarding and the other half the current implementation.</p>
+
+	<h2>Implementation</h2>
+
+	<p>In the spirit of fast and lean iteration, we leveraged our existing design systems and UI patterns to minimize development time and try to validate concepts instead of visuals.</p>
+
+	<h2>Results</h2>
+
+	<p>We saw an improvement across all areas and regions that we tested in.</p>
+
+	- img overall
+
+	<p>In some parts of the funnel the drop off rate was decreased by close to 30%. People were completing their account registartions more often.</p>
+
+	- img full account
+
+	<p>In others the change was not that big – deposits in the UK for example saw only a 2% improvement.</p>
+
+	- uk deposits
+
+	- funnels compared
+
+	<h2>Lessons learned</h2>
+
+	<p>This experience forsed us to look outside of our silos and consider flows more holistically – people don't want to just set-up an account and deposit money for the sake of it – they want to do something else outside of our product and our features are just means to an end.</p>
+
+	<p>When tackling big problems, doing small things imperfectly and testing them goes a long way. Redesigning the entire onboarding process, considering every possible use case, product flow and regulation that we need to abide by would have been an epic endeavour.  Tackling some problems to some extent quickly and then measuring the results surfaced valuable lessons in a critical part of our product.</p>
+</section>
+
