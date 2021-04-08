@@ -19,6 +19,7 @@
 	--c-white: #FFFFFF;
 
 	/* sizes */
+	--l-super: 960px;
 	--l-base: 720px;
 	--l-cozy: 480px;
 	--l-half: 360px;
@@ -104,6 +105,44 @@ body {
 	margin-bottom: var(--v-chunky);
 }
 
+.cs img {
+	margin-top: var(--v-headspace);
+	margin-bottom: var(--v-headspace);
+}
+
+.cs img.cozy {
+	grid-column: cozy;
+	max-width: 100%;
+}
+
+.cs img.full {
+	grid-column: full;
+	max-width: 100%;
+}
+
+.cs img.super {
+	grid-column: super;
+	max-width: 100%;
+}
+
+.cs p,
+.cs ul,
+.cs ol,
+.cs h1,
+.cs h2 {
+	grid-column: full;
+}
+
+.cs p,
+.cs ul,
+.cs ol {
+	margin-bottom: var(--v-base-plus);
+}
+
+section.cs {
+	/*display: block;*/
+}
+
 h1 {
 	font-family: 'Comfortaa', 'Helvetica', 'Arial', sans-serif;
 	font-weight: 700;
@@ -115,7 +154,7 @@ h2 {
 	font-family: 'Comfortaa', 'Helvetica', 'Arial', sans-serif;
 	font-weight: 700;
 	font-size: var(--v-spacious-plus);
-	margin: var(--v-spacious) 0;
+	margin: var(--v-chunky) 0 var(--v-base) 0;
 }
 
 h3 {
@@ -124,7 +163,7 @@ h3 {
 	color: var(--c-base);
 }
 
-p {
+p, ul, li {
 	font-weight: 400;
 	font-size: var(--v-base-plus);
 	margin: 0;
@@ -287,6 +326,15 @@ nav a:focus {
 
 /* LAYOUT */
 
+section.cs {
+	width: var(--l-super);
+	display: grid;
+	grid-template-columns: var(--l-part) var(--l-part) var(--l-part) var(--l-part) var(--l-part) var(--l-part) var(--l-part) var(--l-part);
+	justify-self: center;
+	grid-template-areas: ". . cozy cozy cozy cozy . ." ". full full full full full full ." "super super super super super super super super";
+	margin-bottom: var(--v-fat);
+}
+
 section, footer {
 	width: var(--l-base);
 	display: grid;
@@ -294,10 +342,6 @@ section, footer {
 	justify-self: center;
 	grid-template-areas: ". cozy cozy cozy cozy ." "full full full full full full";
 	margin-bottom: var(--v-fat);
-}
-
-section.cs {
-	display: block;
 }
 
 #hello {
