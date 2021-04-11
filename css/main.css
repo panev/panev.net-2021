@@ -102,12 +102,15 @@ body {
 .cs h1 {
 	text-align: center;
 	margin-top: var(--v-chunky);
-	margin-bottom: var(--v-chunky);
 }
 
 .cs img {
-	margin-top: var(--v-base);
 	margin-bottom: var(--v-headspace);
+}
+
+.cs p + svg,
+.cs p + img {
+	margin-bottom: var(--v-chunky);
 }
 
 .cs .cozy {
@@ -123,6 +126,10 @@ body {
 .cs .super {
 	grid-column: super;
 	max-width: 100%;
+}
+
+nav.cs-nav {
+	text-align: left;
 }
 
 .cs p,
@@ -1077,6 +1084,7 @@ footer {
 		--l-base: 100vw;
 		--l-cozy: 100vw;
 		--l-part: 100vw;
+		--l-super: 100vw;
 	}
 
 	.hello-separator,
@@ -1094,6 +1102,10 @@ footer {
 		padding: 0 var(--v-base-plus);
 	}
 
+	nav.cs-nav > span {
+		display: none;
+	}
+
 	nav a::after {
 		width: var(--v-cozy);
 		height: var(--v-cozy);
@@ -1104,12 +1116,16 @@ footer {
 		display: grid;
 		margin-bottom: var(--v-chunky);
 		grid-template-columns: 100vw;
-		grid-template-areas: "cozy" "full";
+		grid-template-areas: "cozy" "full" "super";
 	}
 
 	section p {
 		padding: 0 var(--v-spacious);
 		margin-bottom: var(--v-base);
+	}
+
+	section h2 {
+		padding: 0 var(--v-spacious);
 	}
 
 	section h3 {

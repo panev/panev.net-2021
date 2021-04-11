@@ -18,26 +18,27 @@ title: 'Redesigning Skrills onboarding'
 	<h2>My role</h2>
 
 	<ul>
-		<li>Work with user researchers to <strong>gather insights</strong> for areas people were </li>struggling with.
-		<li>Work with data analysts to <strong>review quantitative metrics</strong> in key points in the user's&nbsp;journey.</li>
-		<li>Consolidate data and <strong>create a hypothesis for improvement</strong></li>
-		<li><strong>Present</strong> ideas to stakeholders</li>
-		<li>Leverage our design system to <strong>create a usable UI</strong></li>
-		<li>Hand-off to developers and <strong>aid implementation</strong></li>
-		<li>Work with product managers to <strong>plan, roll out and oversee testing</strong></li>
+		<li> Work with user researchers to <strong>🔬 gather insights</strong> for areas people were </li>struggling with.
+		<li> Work with data analysts to <strong>📊 review quantitative metrics</strong> in key points in the user's&nbsp;journey.</li>
+		<li>Review data and <strong>✨ create a hypothesis for improvement</strong></li>
+		<li><strong>🎤 Present</strong> findings and ideas to stakeholders</li>
+		<li> Leverage our design system to <strong>🖌️ create a usable UI</strong></li>
+		<li> Hand-off to developers and <strong>⛑️ aid implementation</strong></li>
+		<li> Work with product managers to <strong>📝 plan, roll out and oversee testing</strong></li>
 	</ul>
 	<h2>Identifying the problem</h2>
 
-	<p>Our onboarding was burdened by technical and ux debt. We knew things could be improved and were further convinced by looking at the data &ndash; there was a big drop-off when people were asked to provide additional details and complete their account.</p>
+	<p>Our onboarding was burdened by technical and UX debt. We knew things could be improved and were further convinced by looking at the data &ndash; there was a big drop-off when people were asked to provide additional details and complete their account.</p>
 
 	{% include img/skrill/funnel1 %}
 
 
 	<p>To gather a complete picture, we conducted a series of user interviews. What people told us matched what the funnel data was showing, providing more detail and nuance to the problem.</p>
 
-	- User snippets
+	<img src="/img/skrill/journey.png" alt="Journey map" class="super">
+	<img src="/img/skrill/users.png" alt="Journey map" class="super">
 
-	<p>We discovered that the user journey was very fragmented, did not follow a predictable and logical flow &ndash; this confused and frustrated our users.</p>
+	<p>We discovered that the user journey was very fragmented, did not follow a predictable and logical flow &ndash; this frustrated our users.</p>
 
 	<h2>An iterative approach</h2>
 
@@ -45,53 +46,55 @@ title: 'Redesigning Skrills onboarding'
 
 	<h2>Forming a hypothesis for improvement</h2>
 
-	<p>Looking at the data, a few things were apparent:</p>
-	<ul>
-		<li>We did not do a good job of building a mental model for our users – people did not know what to expect at each step of their journey.</li>
-		    - Lite dashboard
-		<li>Increased context switching and deviations from their main task confused and frustrated users.</li>
-	   	 - Context switch img
-	</ul>
+	<p>Looking at the data, we noted 2 important things:</p>
+	<p>Issue 1: We did not do a good job of building a mental model for our users – <strong>our light dashboard gave the impression you could do many things, while in reality the only thing you could do is complete your account and make a deposit.</strong> </p>
+	<img src="/img/skrill/lite-dashboard.png" class="super" alt="Light dashboard">
+	<p>Issue 2: Increased context switching and deviations from their main task confused our users.</p>
+   	<img src="/img/skrill/context-switch.svg" alt="Context switch diagram" class="super">
 
 	<p>The idea to improve this was to reduce context switching &ndash; tweak people's perception that every step, as well as their first deposit, is part of one single 'account setup' phase.</p>
 
-	- Anti-context switch img
+   	<img src="/img/skrill/anti-context-switch.svg" alt="In context diagram" class="super">
 
 	<p>We could achieve this by</p>
 	<ol>
-		<li>Setting expectations at the beginning – what is necessary to do the thing I'm here to do.</li>
-		<li>Make our system provide feedback at each step in the journey - where the user is and what's next.</li>
-	- Wireframe images
+		<li>Setting expectations at the beginning – what is possible and what is necessary to do the thing I'm here to do.</li>
+		<li>Make our system provide feedback at each step of the journey - where the user is and what's next.</li>
 	</ol>
-	<p>Beyond these optimisations, the idea evolved into capturing the user's intent at the beginning, providing relevant information and guiding people beyond their account set-up to their main goal.</p>
+	<img src="/img/skrill/new-lite-dashboard1.png" alt="Lite dashboard - first concept" class="super">
+	<img src="/img/skrill/new-lite-dashboard-flows.png" alt="Lite dashboard flow" class="super">
+	<p>Beyond these optimisations, the idea evolved into capturing the user's intent at the beginning, providing relevant information and guiding people beyond their account set-up to their main goal &ndash; <strong>what the person wants to do after they're all set.</strong></p>
 
-	- Blue wireframe images
+	<img src="/img/skrill/lite-dashboard2.png" alt="Lite dashboard revised" class="super">
+	<img src="/img/skrill/new-lite-dashboard-flows2.png" alt="Lite dashboard flow" class="super">
+
+	<p>Capturing intent at the beginning enables us to point the user to their desired path at the end of the onboarding journey:</p>
+
+	<img src="/img/skrill/lite-dashboard3.png" alt="End of the onboarding flow" class="super">
 
 	<h2>Testing</h2>
 
-	<p>A few tests were done on usertesting.com to gather perception and validate there are no major gaps in our concept.</p>
+	<p>A few tests were done on usertesting.com with Figma prototypes prior to development. The goal was to gather perception and validate there are no major gaps in our concept.</p>
 
-	<p>However, due to the fiscal nature of our product, we wanted to perform live tests with our customers. We did this using Adobe Target in a few key regions – approximately half of the people were shown the new version of the onboarding and the other half the current implementation.</p>
+	<p>However, due to the fiscal nature of our product, we wanted to perform live tests with our customers at scale. We did this using Adobe Target in a few key regions – approximately half of the people were shown the new version of the onboarding and the other half the current implementation.</p>
 
-	<h2>Implementation</h2>
+	<h2>Visual design & implementation</h2>
 
 	<p>In the spirit of fast and lean iteration, we leveraged our existing design systems and UI patterns to minimize development time and try to validate concepts instead of visuals.</p>
+
+	<img src="/img/skrill/lite-dashboard-visuals.png" alt="Visual design of the dashboard" class="super">
 
 	<h2>Results</h2>
 
 	<p>We saw an improvement across all areas and regions that we tested.</p>
 
-	- img overall
-
 	<p>In some parts of the funnel, the drop off rate was decreased by close to 30%. People were completing their account registrations more often.</p>
 
-	- img full account
+	<img src="/img/skrill/results-full-accounts.png" alt="Results full accounts" class="full">
 
 	<p>In others the change was not that big – deposits in the UK, for example, saw only a 2% improvement.</p>
 
-	- uk deposits
-
-	- funnels compared
+	<img src="/img/skrill/results-deposit.png" alt="Results deposits" class="full">
 
 	<h2>Lessons learned</h2>
 
@@ -99,7 +102,5 @@ title: 'Redesigning Skrills onboarding'
 
 	{% include img/skrill/zoom-out %}
 	
-
-<!-- 	<p>When tackling big problems, doing small things imperfectly and testing them goes a long way. Redesigning the entire onboarding process, considering every possible use case, product flow and regulation that we need to abide by would have been an epic endeavour.  Tackling some problems to some extent quickly and then measuring the results surfaced valuable lessons in a critical part of our product.</p> -->
 </section>
 
