@@ -807,7 +807,7 @@ section p {
 .fixed {
 	text-decoration: line-through;
 	opacity: 0.8;
-	margin-bottom: var(--v-half);
+	margin-bottom: var(--v-spacious);
 	display: inline-block;
 }
 
@@ -1094,6 +1094,10 @@ footer {
 		display: none;
 	}
 
+	.cs p + svg, .cs p + img {
+		margin-bottom: var(--v-base);
+	}
+
 	nav {
 		width: 100vw;
 	}
@@ -1137,7 +1141,11 @@ footer {
 	}
 
 	.hello-section-active .more-about {
-		height: 480px;
+		height: 520px;
+	}
+
+	@media screen and (max-width: 320px) {
+		.hello-section-active .more-about { height: 560px; }
 	}
 
 	.work-list {
