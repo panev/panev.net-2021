@@ -101,7 +101,11 @@ body {
 
 .cs h1 {
 	text-align: center;
+}
+
+.cs .visual {
 	margin-top: var(--v-chunky);
+	margin-right: -24px;
 }
 
 .cs img {
@@ -780,6 +784,97 @@ section, footer {
 	100% {
 		transform: translateY(120px) scale(1);
 		opacity: 0.2;
+	}
+}
+
+#mag {
+	transform: translate(0px, 0px) scale(1);
+	animation: mag-moves 4s infinite;
+}
+
+#z1 {animation: z1-moves 4s infinite;}
+#z2 {animation: z2-moves 4s infinite;}
+#z3 {animation: z3-moves 4s infinite;}
+
+#z1, #z2, #z3 {
+	transform-origin: center;
+	transform: translate(0px, 0px) scale(1);
+}
+
+
+@keyframes mag-moves {
+	0% {
+		transform: translate(-8px, 0px) scale(1.0);
+	}
+
+	33% {
+		transform: translate(-36px, -2px) scale(1.1);
+	}
+
+	66% {
+		transform: translate(-4px, -25px) scale(1.0);
+	}
+
+	100% {
+		transform: translate(-8px, 0px) scale(1.0);
+	}
+}
+
+@keyframes z3-moves {
+	0% {
+		transform: scale(1.2);
+	}
+
+	30% {
+		transform: scale(1.0);
+	}
+
+	63% {
+		transform: scale(1.0);
+	}
+
+	97% {
+		transform: scale(1.2);
+	}
+
+	100% {
+		transform: scale(1.2);
+	}
+}
+
+@keyframes z2-moves {
+	0% {
+		transform: scale(1.0);
+	}
+
+	30% {
+		transform: scale(1.3);
+	}
+
+	63% {
+		transform: scale(1.0);
+	}
+
+	97% {
+		transform: scale(1.0);
+	}
+}
+
+@keyframes z1-moves {
+	0% {
+		transform: scale(1.0);
+	}
+
+	30% {
+		transform: scale(1.0);
+	}
+
+	63% {
+		transform: scale(1.2);
+	}
+
+	97% {
+		transform: scale(1.0);
 	}
 }
 
