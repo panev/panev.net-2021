@@ -2,22 +2,5 @@
 	<a id="hello-link" class="nav-link-active" tabindex="0">Hello</a>
 	<a id="work-link" tabindex="0">Work</a>
 	<a id="contact-link" tabindex="0">Contact</a>
-	<div class="themes">
-		<div class="purple-container theme-active" onclick="setPurple()">
-			<div class="dot"></div>
-			<div class="label">Purple</div>
-		</div>
-		<div class="peach-container" onclick="setPeach()">
-			<div class="dot"></div>
-			<div class="label">Peach</div>
-		</div>
-		<div class="mono-container" onclick="setMono()">
-			<div class="dot"></div>
-			<div class="label">Mono</div>
-		</div>
-		<div class="dark-mono-container" onclick="setDarkMono()">		
-			<div class="dot"></div>
-			<span class="label">Dark Mono</span>
-		</div>
-	</div>
+	{% include components/theme-switcher %}
 </nav>
