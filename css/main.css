@@ -230,8 +230,8 @@ nav a:hover {
 nav a:focus {
 	/*color: var(--c-medi);*/
 	outline: none;
-	text-decoration: underline wavy var(--c-high);
-}
+/*	text-decoration: underline wavy var(--c-high);
+*/}
 
 .nav-link-active::after {
 	transform: translateY(50%) scale(1);
@@ -803,7 +803,9 @@ section p {
 
 .fixed {
 	text-decoration: line-through;
-	opacity: 0.75;
+	opacity: 0.8;
+	margin-bottom: var(--v-half);
+	display: inline-block;
 }
 
 .more-about {
