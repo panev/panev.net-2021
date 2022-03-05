@@ -3,13 +3,13 @@ layout: layouts/main
 title: "How we redesigned Skrill's onboarding journey"
 ---
 
-{% include components/section-header %}
+{% include "components/section-header.liquid" %}
 
 
 <section class="cs">
 
 	<div class="visual doc">
-		{% include svgs/visuals/visual-doc %}
+		{% include "svgs/visuals/visual-doc.liquid" %}
 		
 	</div>
 	<h1>{{ title }}</h1>
@@ -34,7 +34,7 @@ title: "How we redesigned Skrill's onboarding journey"
 
 	<p>Our onboarding was burdened by technical and UX debt. We knew things could be improved and were further convinced by looking at the data &ndash; there was a big drop-off when people were asked to provide additional details and complete their account.</p>
 
-	{% include img/skrill/funnel1 %}
+	{% include "img/skrill/funnel1" %}
 
 
 	<p>To gather a complete picture, we conducted a series of user interviews. What people told us matched what the funnel data was showing, providing more detail and nuance to the problem.</p>
@@ -101,7 +101,7 @@ title: "How we redesigned Skrill's onboarding journey"
 
 	<p>This experience forced us to look outside of our silos and consider flows more holistically – people don't want to just set up an account and deposit money for the sake of it – they want to do something else outside of our product and our features are just means to an end.</p>
 
-	{% include img/skrill/zoom-out %}
+	{% include "img/skrill/zoom-out" %}
 	
 </section>
 

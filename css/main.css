@@ -75,28 +75,14 @@ body {
 .inline-link {
 	font-weight: 700;
 	position: relative;
-}
-
-.inline-link::after {
-	content: '';
-	display: inline;
-	background: var(--c-high);
-	width: 100%;
-	height: 4px;
-	border-radius: 2px;
-	position: absolute;
-	left: 0;
-	bottom: -6px;
+	text-decoration: underline 4px var(--c-high);
 }
 
 .inline-link:hover,
 .inline-link:focus {
 	color: var(--c-high);
 	outline: none;
-}
-
-.inline-link:hover::after {
-	bottom: -4px;
+	text-decoration: underline 2px wavy var(--c-high);
 }
 
 .cs h1 {
