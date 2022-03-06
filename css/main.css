@@ -75,14 +75,19 @@ body {
 .inline-link {
 	font-weight: 700;
 	position: relative;
-	text-decoration: underline 4px var(--c-high);
+	text-decoration-color: var(--c-high);
+	text-decoration-thickness: 4px;
+	text-decoration-style: solid;
+	text-decoration-line: underline;
 }
 
 .inline-link:hover,
 .inline-link:focus {
 	color: var(--c-high);
 	outline: none;
-	text-decoration: underline 2px wavy var(--c-high);
+	text-decoration-color: var(--c-high);
+	text-decoration-thickness: 2px;
+	text-decoration-style: wavy;
 }
 
 .cs h1 {
