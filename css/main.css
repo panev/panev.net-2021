@@ -33,6 +33,7 @@
 	--v-spacious: 24px;
 	--v-spacious-plus: 32px;
 	--v-headspace: 40px;
+	--v-headspace-plus: 64px;
 	--v-chunky: 80px;
 	--v-fat: 160px;
 }
@@ -990,6 +991,17 @@ section p {
 	opacity: 0;
 }
 
+.work-list li.inactive {
+	opacity: 0.5;
+	/*pointer-events: none;*/
+	cursor: not-allowed!important;
+}
+
+.work-list li.inactive * {
+	cursor: not-allowed!important;
+
+}
+
 /* STYLES TBA */
 /*.work-list a:focus {
 	background: var(--c-high);
@@ -1161,6 +1173,87 @@ footer {
 	}
 }
 
+/* ZENCASTR  */
+
+.zencastr {
+	cursor: url('../img/zencastr/cursor.svg'), pointer;
+	background: #000;
+	min-height: 100vh;
+	text-align: center;
+	color: rgb(204, 204, 204);
+}
+
+.zencastr h1 {
+	color: #fff;
+	height: auto;
+	font-size: var(--v-chunky);
+}
+
+.zencastr h1 span {
+	color: #007bff;
+}
+
+.zencastr p {
+	max-width: 720px;
+	text-align: left;
+	margin: 0 auto var(--v-base-plus) auto;
+}
+
+.zencastr a {
+	height: 48px;
+	border-radius: 12px;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	line-height: 48px;
+	margin: 12px;
+	width: 180px;
+	font-weight: 700;
+}
+
+.zencastr-blue {
+	background: #007bff;
+}
+
+.zencastr-purple {
+	background: #6f42c1;
+}
+
+.zencastr-pink {
+	background: #e83e8c
+}
+
+.zencastr .cta-wrapper {
+	margin-bottom: var(--v-fat);
+}
+
+.zencastr-player {
+	width: 480px;
+	height: 480px;
+	transition: 0.5s;
+	margin: var(--v-chunky) auto;
+}
+
+.zencastr-player iframe {
+	transition: 0.3s;
+	animation: player-appear 2s;
+}
+
+
+
+@keyframes player-appear {
+	0% {
+		transform: rotateX(90deg);
+		opacity: 0;
+	}
+
+	100% {
+		transform: rotateX(0deg);
+		opacity: 1;
+	}
+}
+
+
 
 /* RWD */
 
@@ -1249,11 +1342,6 @@ footer {
 		margin: 0 0 var(--v-base);
 	}
 
-	.work-list li.inactive {
-		height: var(--v-chunky);
-		grid-template-rows: 50% 50%;
-	}
-
 	.work-list li h4 {
 		grid-column: 2 / 4;
 		align-self: center;
@@ -1286,6 +1374,25 @@ footer {
 
 	footer {
 		display: block;
+	}
+
+	.zencastr {
+		text-align: center;
+	}
+
+	.zencastr p {
+		width: 90%;
+		padding: 0 16px;
+	}
+
+	.zencastr h1 {
+		font-size: var(--v-headspace);
+	}
+
+	.zencastr iframe,
+	.zencastr-player {
+		width: 90%!important;
+		height: 375px!important;
 	}
 
 }
