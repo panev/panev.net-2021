@@ -94,6 +94,7 @@ body {
 
 .cs h1 {
 	text-align: center;
+	padding: 0 var(--v-base);
 }
 
 .cs .visual {
