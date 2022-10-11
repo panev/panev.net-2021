@@ -15,6 +15,7 @@
 	--c-diff: var(--c-purple-alt);
 	--c-base: #2D2D2D;
 	--c-medi: #595959;
+	--c-lite-medi: #D8D8D8;
 	--c-lite: #E7E7E7;
 	--c-white: #FFFFFF;
 
@@ -891,11 +892,31 @@ section p {
 	margin: var(--v-spacious) 0;
 }
 
-.fixed {
-	text-decoration: line-through;
-	opacity: 0.8;
+
+hr{
+    border-style: dashed none none none;
+    margin-top: var(--v-spacious);
+    color: var(--c-lite-medi);
+}
+
+.hello-intro {
+	grid-column: cozy;
+}
+
+.hello-intro p {
+	position: relative;
 	margin-bottom: var(--v-spacious);
-	display: inline-block;
+}
+
+.hello-intro p:last-child {
+	margin: 0;
+}
+
+.hello-intro p i {
+	font-style: normal;
+	position: absolute;
+	left: -36px;
+	font-size: 24px;
 }
 
 .more-about {
@@ -910,7 +931,7 @@ section p {
 }
 
 .hello-section-active .more-about {
-	height: 420px;
+	height: 600px;
 }
 
 .hello-section-active .hello-separator path {
@@ -1316,15 +1337,19 @@ footer {
 	}
 
 	section .button-text {
-		margin-top: var(--v-base-plus)
+		margin-top: var(--v-headspace)
 	}
 
 	.hello-section-active .more-about {
-		height: 520px;
+		height: 720px;
 	}
 
 	@media screen and (max-width: 320px) {
-		.hello-section-active .more-about { height: 560px; }
+		.hello-section-active .more-about { height: 860px; }
+	}
+
+	@media screen and (min-width: 424px) {
+		.hello-section-active .more-about { height: 640px; }
 	}
 
 	.work-list {
