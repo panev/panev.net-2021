@@ -149,15 +149,15 @@ nav.cs-nav > span {
 }
 
 h1 {
-	font-family: 'Comfortaa', 'Helvetica', 'Arial', sans-serif;
+	font-family: 'PT Serif', 'Helvetica', 'Arial', sans-serif;
 	font-weight: 700;
 	font-size: var(--v-headspace);
 	margin: var(--v-spacious) 0;
 }
 
 h2 {
-	font-family: 'Comfortaa', 'Helvetica', 'Arial', sans-serif;
-	font-weight: 700;
+	font-family: 'PT Serif', 'Helvetica', 'Arial', sans-serif;
+	font-weight: 400;
 	font-size: var(--v-spacious-plus);
 	margin: var(--v-chunky) 0 var(--v-base) 0;
 }
@@ -165,8 +165,9 @@ h2 {
 h3 {
 	font-weight: 400;
 	font-size: var(--v-base-plus);
-	color: var(--c-medi);
+	color: var(--c-base);
 	margin: var(--v-spacious);
+	font-family: 'PT Serif', 'Helvetica', 'Arial', sans-serif;
 }
 
 p, ul, li {
@@ -179,19 +180,34 @@ p, ul, li {
 svg:active * {
 	fill: var(--c-white);
 	stroke: var(--c-medi);
+	cursor: zoom-in;
 }
 
 /* NAVIGATION */
 
 nav {
 	height: var(--v-chunky);
-	width: 100%;
+    margin-top: var(--v-base-plus);
+	grid-column: full;
+	width: 840px;
+    border: 1px dashed #fff;
 	background: var(--c-white);
 	position: fixed;
+    left: 50%;
 	top: 0;
-	text-align: center;
+	text-align: left;
+	padding-left: var(--v-headspace-plus);
+    transform: translateX(-50%);
 	z-index: 1000;
 	box-shadow: 0px 12px 18px rgba(0, 0, 0, 0.04);
+	transition: 0.3s;
+	border-radius: var(--v-spacious);
+
+}
+
+nav:hover {
+    transform: translateX(-50%) scale(1.02);
+	border: 1px dashed var(--c-lite-medi);
 }
 
 nav a {
@@ -1000,11 +1016,49 @@ hr{
 	margin-bottom: var(--v-base);
 	display: block;
 	transition: 0.3s;
-	overflow: hidden;
 	transform-origin: center;
 	align-self: start;
-
 }
+
+.work-list.personal-projects li:after,
+.work-list.articles li:after {
+	content: '';
+	position: absolute;
+	background-image: url('../img/arrow-ext.svg');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	transition: 0.3s;
+	transform: scale(0) rotate(45deg);
+	opacity: 0;
+	top: -8px;
+	right: -8px;
+	width: 24px;
+	height: 24px;
+	border-radius: 30%;
+	background-color: var(--c-high);
+	z-index: 999;
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.work-list.case-studies li:after {
+	content: '';
+	position: absolute;
+	background-image: url('../img/eye.svg');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	transition: 0.3s;
+	transform: scale(0) rotate(45deg);
+	opacity: 0;
+	top: -8px;
+	right: -8px;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: var(--c-high);
+	z-index: 999;
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);	
+}
+
 
 .work-list a {
 	display: grid;
@@ -1015,7 +1069,6 @@ hr{
 	padding: 20px;
 	width: 100%;
 	box-sizing: border-box;
-	grid
 }
 
 .work-list a .button-arrow {
@@ -1024,7 +1077,6 @@ hr{
 
 .work-list li.inactive {
 	opacity: 0.5;
-	/*pointer-events: none;*/
 	cursor: not-allowed!important;
 }
 
@@ -1094,6 +1146,7 @@ hr{
 
 .work-list h4 {
 	display: inline-block;
+	font-family: 'PT Serif', 'Helvetica', 'Arial', sans-serif;
 	font-size: var(--v-base-plus);
 	font-weight: 700;
 	vertical-align: top;
@@ -1155,6 +1208,17 @@ hr{
 	color: var(--c-high);
 }
 
+.work-list.case-studies li:hover:after {
+	opacity: 1;
+	transform: scale(1) rotate(0deg);
+}
+
+.work-list.personal-projects li:hover:after,
+.work-list.articles li:hover:after {
+	opacity: 1;
+	transform: scale(1) rotate(0deg);
+}
+
 /* CONTACT SECTION */
 
 #contact p {
@@ -1204,7 +1268,7 @@ hr{
 footer {
 	text-align: center;
 	margin-top: var(--v-chunky);
-	margin-bottom: var(--v-fat);
+	margin-bottom: 400px;
 	font-size: var(--v-base);
 }
 
@@ -1337,6 +1401,13 @@ footer {
 
 	nav {
 		width: 100vw;
+		margin-top: 0;
+		bottom: 0;
+		top: unset;
+		text-align: center;
+		padding: 0;
+		border-top: 1px dashed var(--c-lite-medi);
+		border-radius: 0;
 	}
 
 	nav a {
@@ -1390,18 +1461,18 @@ footer {
 	}
 
 	.work-list {
-		grid-template-columns: 100vw;
+		grid-template-columns: 90vw;
 		column-gap: 0;
 		margin: 0;
 		box-sizing: border-box;
+		justify-content: center;
 	}
 
 	.work-list li {
 		background: #fff;
 		grid-template-rows: 40% 60%;
-		border-radius: 0;
 		grid-column: span 1;
-		margin: 0 0 var(--v-base);
+		margin: 0 0 var(--v-base) 0;
 	}
 
 	.work-list li h4 {
