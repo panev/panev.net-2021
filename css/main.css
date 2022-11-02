@@ -77,8 +77,8 @@ body {
 .inline-link {
 	font-weight: 700;
 	position: relative;
-	text-decoration-color: var(--c-high);
-	text-decoration-thickness: 4px;
+	text-decoration-color: var(--c-diff);
+	text-decoration-thickness: 2px;
 	text-decoration-style: solid;
 	text-decoration-line: underline;
 }
@@ -190,7 +190,7 @@ nav {
     margin-top: var(--v-base-plus);
 	grid-column: full;
 	width: 840px;
-    border: 1px dashed #fff;
+    border: 1px dotted var(--c-lite);
 	background: var(--c-white);
 	position: fixed;
     left: 50%;
@@ -206,8 +206,8 @@ nav {
 }
 
 nav:hover {
-    transform: translateX(-50%) scale(1.02);
-	border: 1px dashed var(--c-lite-medi);
+    transform: translateX(-50%) scale(1.01) translateY(2px);
+	border: 1px dotted var(--c-lite-medi);
 }
 
 nav a {
@@ -982,10 +982,9 @@ hr{
 	transition: 0.25s;
 }
 
-.button-text:hover,
-.button-text:focus {
-	transform: scale(1.1);
+.button-text:hover {
 	outline: none;
+	color: var(--c-high);
 }
 
 /* WORK SECTION */
