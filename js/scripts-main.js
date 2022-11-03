@@ -134,6 +134,16 @@ const themeMonoButton = document.querySelector('.mono-container')
 
 const themeDarkMonoButton = document.querySelector('.dark-mono-container')
 
+// Case study utils
+
+// Zooming on click
+const zoomable = document.querySelectorAll('.zoomable')
+
+zoomable.forEach((element) => {
+	element.addEventListener('click', function() {
+		element.classList.toggle('image-zoomed')
+	}, false)
+})
 
 // * FOOTER *
 

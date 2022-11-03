@@ -1,6 +1,6 @@
 <section id="work" role="region" aria-label="work showcase">
 
-	<div class="visual coffee">
+	<div data-analytics='"Action: Visclick Coffee"' class="visual coffee">
 
 		{% include "svgs/visuals/visual-coffee" %}
 
@@ -15,6 +15,17 @@
 	{% include "svgs/ribbons/ribbon-stories-right" %}
 	
 	<ul class="work-list case-studies">
+		<li>
+			<a href="/onboarding-redesign-case-study">
+			
+				<div class="thumbnail">
+					{% include "svgs/thumbs/thumbs-onboarding" %}
+				</div>
+				<h4>Redesigning Skrill's onboarding journey</h4>
+				<span class="description"><strong>The story</strong> of how we identified major issues in our new customer journey and what we did to fix them.</span>
+			</a>
+		</li>
+		<li class="nothing-to-see-here">this is just a placeholder for the gap</li>
 		<li>
 			<a href="/remodeling-the-on-prem-upgrade-process-at-hyperscience">
 			
@@ -36,16 +47,6 @@
 			</a>
 			<div class="label">Available on request</div>
 		</li>
-		<li>
-			<a href="/onboarding-redesign-case-study">
-			
-				<div class="thumbnail">
-					{% include "svgs/thumbs/thumbs-onboarding" %}
-				</div>
-				<h4>Redesigning Skrill's onboarding journey</h4>
-				<span class="description"><strong>The story</strong> of how we identified major issues in our new customer journey and what we did to fix them.</span>
-			</a>
-		</li>
 	</ul>
 
 	{% include "svgs/ribbons/ribbon-projects-left" %}
@@ -57,7 +58,7 @@
 
 	<ul class="work-list personal-projects">
 		<li class="inactive">
-			<a href="#work" rel="noopener">
+			<a data-analytics='"Action: EXTLINK Personal DesginBits"' href="#work" rel="noopener">
 
 				<div class="thumbnail">
 					{% include "svgs/thumbs/thumbs-mic" %}
@@ -69,7 +70,7 @@
 			<div class="label">The pod will be back soon!</div>
 		</li>
 		<li>
-			<a href="https://archive.sintez.studio/en/" target="_blank" rel="noopener">
+			<a data-analytics='"Action: EXTLINK Personal Sintez"' href="https://archive.sintez.studio/en/" target="_blank" rel="noopener">
 
 				<div class="thumbnail">
 					{% include "svgs/thumbs/thumbs-sintez" %}
@@ -80,7 +81,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="https://typingsapp.panev.net" target="_blank" rel="noopener">
+			<a data-analytics='"Action: EXTLINK Personal Typings"' href="https://typingsapp.panev.net" target="_blank" rel="noopener">
 
 				<div class="thumbnail">
 					{% include "svgs/thumbs/thumbs-typings" %}
@@ -91,7 +92,7 @@
 			</a>
 		</li>
  		<li>
-			<a href="https://www.figma.com/community/plugin/740632514053994647/Text-Counts" target="_blank" rel="noopener">
+			<a data-analytics='"Action: EXTLINK Personal TextCounts"' href="https://www.figma.com/community/plugin/740632514053994647/Text-Counts" target="_blank" rel="noopener">
 			
 				<div class="thumbnail">
 					{% include "svgs/thumbs/thumbs-textcounts" %}
@@ -111,7 +112,7 @@
 	
 	<ul class="work-list articles">
 		<li>
-			<a href="https://panev.medium.com/the-number-of-clicks-f1f27d980637" target="_blank" rel="noopener">
+			<a data-analytics='"Action: EXTLINK Article NumOfClicks"' href="https://panev.medium.com/the-number-of-clicks-f1f27d980637" target="_blank" rel="noopener">
 				
 				<div class="thumbnail">
 					{% include "svgs/thumbs/thumbs-clicks" %}
@@ -122,7 +123,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="https://panev.medium.com/why-i-build-my-new-website-as-a-single-html-document-1bd66846badb" target="_blank" rel="noopener">
+			<a data-analytics='"Action: EXTLINK Article html"' href="https://panev.medium.com/why-i-build-my-new-website-as-a-single-html-document-1bd66846badb" target="_blank" rel="noopener">
 
 				<div class="thumbnail">
 					{% include "svgs/thumbs/thumbs-why" %}

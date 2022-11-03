@@ -92,6 +92,8 @@ body {
 	text-decoration-style: wavy;
 }
 
+/* case study type, etc */
+
 .cs h1 {
 	text-align: center;
 	padding: 0 var(--v-base);
@@ -147,6 +149,26 @@ nav.cs-nav > span {
 .cs ol {
 	margin-bottom: var(--v-base-plus);
 }
+
+/* zoom  */
+
+.zoomable:hover {
+	cursor: zoom-in;
+}
+
+.image-zoomed {
+	position: relative;
+	max-width: unset;
+	width: 80vw;
+	transform: translateX(-50%);
+	left: 50%;
+}
+
+.image-zoomed:hover {
+	cursor: zoom-out;
+}
+
+
 
 h1 {
 	font-family: 'PT Serif', 'Helvetica', 'Arial', sans-serif;
@@ -1034,7 +1056,7 @@ hr{
 	width: 24px;
 	height: 24px;
 	border-radius: 30%;
-	background-color: var(--c-high);
+	background-color: var(--c-diff);
 	z-index: 999;
 	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
 }
@@ -1177,6 +1199,11 @@ hr{
 
 
 /* list item hover state */
+
+.nothing-to-see-here {
+	opacity: 0;
+	visibility: hidden;
+}
 
 .work-list li:hover {
 	transform: translateY(-4px) scale(1.01);
