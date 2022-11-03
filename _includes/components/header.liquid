@@ -1,6 +1,6 @@
 <nav role="navigation">
 	<a id="hello-link" class="nav-link-active" tabindex="0">Hello</a>
-	<a id="work-link" tabindex="0">Work</a>
-	<a id="contact-link" tabindex="0">Contact</a>
+	<a data-analytics='"Action: Used Nav", {"props":{"item": "Work"}}' id="work-link" tabindex="0">Work</a>
+	<a data-analytics='"Action: Used Nav", {"props":{"item": "Contact"}}' id="contact-link" tabindex="0">Contact</a>
 	{% include "components/theme-switcher" %}
 </nav>

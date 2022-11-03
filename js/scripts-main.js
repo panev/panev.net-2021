@@ -12,6 +12,8 @@ function setPeach() {
 	document.documentElement.style.setProperty('--c-high', '#FEBC9D');
 	document.documentElement.style.setProperty('--c-diff', '#F06565');
 
+	plausible('Action: Theme Peach')
+
 }
 
 function setPurple() {
@@ -25,6 +27,8 @@ function setPurple() {
 	// Set the vars
 	document.documentElement.style.setProperty('--c-high', '#A68EFC');
 	document.documentElement.style.setProperty('--c-diff', '#626FE3');
+
+	plausible('Action: Theme Purple')
 }
 
 function setMono() {
@@ -46,6 +50,8 @@ function setMono() {
 	addSvgFills("path", "black")
 	addSvgFills("circle", "black")
 	
+	plausible('Action: Theme Mono')
+
 }
 
 function setDarkMono() {
@@ -78,6 +84,8 @@ function setDarkMono() {
 	addSvgFills("oval", "white")
 	addSvgFills("path", "white")
 	addSvgFills("circle", "white")
+
+	plausible('Action: Theme Dark Mono')
 	
 }
 

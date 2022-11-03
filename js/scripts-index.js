@@ -67,14 +67,17 @@ document.addEventListener("scroll", function(){
 // Manage nav clicks
 helloLink.addEventListener("click", function() {
 	window.scrollTo({top: helloPosStart, behavior: 'smooth'})
+	plausible('Action: Used Nav', {props: {item: 'Hello'}})
 })
 
 workLink.addEventListener("click", function() {
 	window.scrollTo({top: workSection.offsetTop - 120, behavior: 'smooth'})
+	plausible('Action: Used Nav', {props: {item: 'Work'}})
 })
 
 contactLink.addEventListener("click", function() {
 	window.scrollTo({top: contactSection.offsetTop - 160, behavior: 'smooth'})
+	plausible('Action: Used Nav', {props: {item: 'Contact'}})
 })
 
 // * SECTION LOGIC *
@@ -84,7 +87,9 @@ contactLink.addEventListener("click", function() {
 let helloAction = document.querySelector("#helloAction")
 
 helloAction.addEventListener("click", function(){
+
 	helloSection.classList.toggle("hello-section-active")
+
 	if (!helloSection.classList.contains("hello-section-active")) {
 		helloAction.innerHTML = "Read a bit more"
 	}
@@ -93,4 +98,27 @@ helloAction.addEventListener("click", function(){
 		helloAction.innerHTML = "Read a bit less"
 	}
 
+	plausible('Action: Read a bit more or less')
+
 })
+
+
+// Handle illustration clicks
+
+const illustrations = document.querySelectorAll('.visual')
+
+illustrations.forEach((element) => {
+	element.addEventListener('click', function() {
+		plausible('Action: Clicked Visual', {props: {visual: element.classList.value}})
+	}, false)
+})
+
+
+
+
+
+
+
+
+
+
