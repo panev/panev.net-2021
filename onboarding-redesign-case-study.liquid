@@ -1,6 +1,6 @@
 ---
 layout: layouts/main
-title: "How we redesigned Skrill's onboarding journey"
+title: "Redesigning Skrill's onboarding journey"
 ---
 
 {% include "components/section-header.liquid" %}
@@ -16,12 +16,12 @@ title: "How we redesigned Skrill's onboarding journey"
 	<h1>{{ title }}</h1>
 	<h2>Overview</h2>
 
-	<p>At Skrill, our registration and onboarding process was sub-optimal. We identified this by looking at conversion rate numbers and doing a series of user interviews.</p>
+	<p>At Skrill, our registration and onboarding process was sub-optimal. We identified this by looking at conversion rate numbers and performing a series of user interviews.</p>
 
 	<p><strong>Our goal was to decrease the drop-off rate in our onboarding process.</strong></p>
 
 	<h2>My role</h2>
-	<p>I was the lead product designer on this project, which meant I had to collaborate with a multitude of people and get involved in many different activities.</p>
+	<p>I was the lead product designer on this project – which meant I had to collaborate with a multitude of different teams and get involved in various activities:</p>
 	<ul>
 		<li> Work with user researchers to <strong>🔬 gather insights</strong> for areas people were </li>struggling with.
 		<li> Work with data analysts to <strong>📊 review quantitative metrics</strong> in key points in the user's&nbsp;journey.</li>
@@ -31,66 +31,75 @@ title: "How we redesigned Skrill's onboarding journey"
 		<li> Hand-off to developers and <strong>⛑️ aid implementation</strong></li>
 		<li> Work with product managers to <strong>📝 plan, roll out and oversee testing</strong></li>
 	</ul>
-	<h2>Identifying the problem</h2>
+	<h2>Problem discovery</h2>
 
-	<p>Our onboarding was burdened by technical and UX debt. We knew things could be improved and were further convinced by looking at the data &ndash; there was a big drop-off when people were asked to provide additional details and complete their account.</p>
+	<p>Our onboarding experience was burdened by technical and UX debt. We knew it could be improved and were further convinced by looking at the data – there was a significant drop-off at a point in the journey where we asked people to provide additional details and complete their accounts.</p>
 
-	{% include "img/skrill/funnel1" %}
+	{% include "img/skrill/v2/quant-funnel" %}
 
 
-	<p>To gather a complete picture, we conducted a series of user interviews. What people told us matched what the funnel data was showing, providing more detail and nuance to the problem.</p>
+	<p>To get a better understanding of what was going on, we conducted 15 user interviews with clients from multiple countries. We asked them to go through the sign-up flow, get verified, make a deposit and start using Skrill – what people told us matched the funnel data, providing more detail and nuance to the problem.</p>
 
-	<img src="/img/skrill/journey.png" alt="Journey map" class="super">
-	<img src="/img/skrill/users.png" alt="Journey map" class="super">
+	<img src="/img/skrill/v2/qual.png" srcset="/img/skrill/v2/qual@2x.png" 2x alt="Journey map" class="full">
 
-	<p>We discovered that the user journey was very fragmented, did not follow a predictable and logical flow &ndash; this frustrated our users.</p>
+	<p>After gathering all the data, we mapped out the first-deposit user flow and connected quantitative and qualitative information for each checkpoint, creating a more detailed user journey.</p>
 
-	<h2>An iterative approach</h2>
 
-	<p>Our digital wallet provided many value props, each of which had its little stack prerequisites and flows. Instead of opting for a complete overhaul, we decided to go for the least amount of changes that could generate the most improvement and could be tested and observed – an MVP, if you will.</p>
+	<img src="/img/skrill/v2/stack.png" srcset="/img/skrill/v2/stack@2x.png" 2x alt="Journey map" class="super">
 
-	<h2>Forming a hypothesis for improvement</h2>
+	<p>We discovered that the user journey was fragmented and did not follow a predictable set of actions – we made promises in our value props we did not keep – this frustrated users, causing them not to complete their sign-up and leave Skrill.</p>
 
-	<p>Looking at the data, we noted 2 important issues:</p>
-	<p>Issue 1: We did not do a good job of building a mental model for our users – <strong>our light dashboard gave the impression you could do many things, while in reality the only thing you could do is complete your account and make a deposit.</strong> </p>
-	<img src="/img/skrill/lite-dashboard.png" class="super" alt="Light dashboard">
-	<p>Issue 2: Increased context switching and deviations from their main task confused our users.</p>
-   	<img src="/img/skrill/context-switch.svg" alt="Context switch diagram" class="super">
+	<h2>Problem definition</h2>
+	<p>To narrow in the problem space, I broke the problem down into two main issues:</p>
 
-	<p>The idea to improve this was to reduce context switching &ndash; tweak people's perception that every step, as well as their first deposit, is part of one single 'account setup' phase.</p>
+	<p><strong>Issue 1:</strong> We did not do a great job of building a mental model for our users – after creating a Light Account, our Light Dashboard gave users the impression that they could do many things, while in reality, arguably the only valuable thing they could do is make a Full Account by doing a first-deposit.</p>
 
-   	<img src="/img/skrill/anti-context-switch.svg" alt="In context diagram" class="super">
 
-	<p>We could achieve this by setting expectations at the beginning – what is possible and what is necessary to do the thing I'm here to do...</p>
-	<img src="/img/skrill/new-lite-dashboard1.png" alt="Lite dashboard - first concept" class="super">
-	<p>... and make our system provide feedback at each step of the journey - where the user is and what's next.</p>
-	<img src="/img/skrill/new-lite-dashboard-flows.png" alt="Lite dashboard flow" class="super">
-	<p>Beyond these optimisations, the idea evolved into capturing the user's intent at the beginning, providing relevant information and guiding people beyond their account set-up to their main goal &ndash; <strong>what the person wants to do after they're all set.</strong></p>
+	<img src="/img/skrill/v2/issue1.png" srcset="/img/skrill/v2/issue1@2x.png" 2x alt="Journey map" class="super">
 
-	<img src="/img/skrill/lite-dashboard2.png" alt="Lite dashboard revised" class="super">
-	<img src="/img/skrill/new-lite-dashboard-flows2.png" alt="Lite dashboard flow" class="super">
+	<p><strong>Issue 2:</strong> Unexpected context switching and deviations from their task confused users. People started one action but were constantly interrupted by the system asking them to perform other actions.</p>
 
-	<p>Capturing intent at the beginning enables us to point the user to their desired path at the end of the onboarding journey:</p>
 
-	<img src="/img/skrill/lite-dashboard3.png" alt="End of the onboarding flow" class="super">
+	<img src="/img/skrill/v2/issue2.png" srcset="/img/skrill/v2/issue2@2x.png" 2x alt="Journey map" class="super">
 
-	<h2>Testing</h2>
 
-	<p>A few tests were done on usertesting.com with Figma prototypes prior to development. The goal was to gather perception and validate there are no major gaps in our concept.</p>
+	<h2>Opting for 80/20</h2>
+	<p>Our digital wallet provided many value props – each with its little stack of prerequisites and user flows, so instead of doing a complete overhaul of the entire journey, we decided to go for the least amount of changes that could generate the most improvement and could be tested and observed right away.</p>
 
-	<p>However, due to the fiscal nature of our product, we wanted to perform live tests with our customers at scale. We did this using Adobe Target in a few key regions – approximately half of the people were shown the new version of the onboarding and the other half the current implementation.</p>
+
+	<h2>Solution hypothesis</h2>
+	<p>The main improvement idea was to reduce the switching of context – tweak the perception that every step, as well as the first deposit, is part of one single "account setup" phase.</p>
+
+	<img src="/img/skrill/v2/solution1.png" srcset="/img/skrill/v2/solution1@2x.png" 2x alt="Journey map" class="super">
+
+	<p>Users could technically do some things in Skrill with a Light Account, but we needed to signal that this is a limited experience and entice people to complete their accounts to get going with our product.</p>
+
+	<p>To achieve this, we had to set expectations at the beginning – what is possible and what is necessary to do the thing users are here to do and make our system provide feedback at each step of the journey - where the user is and what is next.</p>
+
+
+	<img src="/img/skrill/v2/solution2.png" srcset="/img/skrill/v2/solution2@2x.png" 2x alt="Journey map" class="super">
+
+	<p>Beyond these enhancements, the idea evolved into capturing user intent at the beginning, providing relevant information and guiding people beyond their account setup to achieve their goal.</p>
+
+	<img src="/img/skrill/v2/solution3.png" srcset="/img/skrill/v2/solution3@2x.png" 2x alt="Journey map" class="full">
+
+	<p>Capturing intent at the beginning enabled us to point the user to their desired path at the end of the onboarding journey.</p>
+
+	<h2>User testing</h2>
+
+	<p>Before starting development, we did a few moderated user tests on usertesting.com – the goal was to gather perceptions and validate there were no major gaps in our concept.</p>
+	<p>Due to the fiscal nature of our product, we wanted to perform live tests with our customers at scale before we do a major rollout. </p>
+	<p>We did this using Adobe Target in a few key regions – approximately half of the users visiting our platform were shown the new version of the onboarding and the other half the old implementation.</p>
 
 	<h2>Visual design & implementation</h2>
 
-	<p>In the spirit of fast and lean iteration, we leveraged our existing design systems and UI patterns to minimize development time and try to validate concepts instead of visuals.</p>
+	<p>In the spirit of fast and lean iteration, I leveraged our existing design systems and UI patterns to minimize development time and try to validate the key concepts faster, opting to enhance our visuals further should our solution work well.</p>
 
-	<img src="/img/skrill/lite-dashboard-visuals.png" alt="Visual design of the dashboard" class="super">
+	<img src="/img/skrill/v2/vd.png" srcset="/img/skrill/v2/vd@2x.png" 2x alt="Journey map" class="full">
 
 	<h2>Results</h2>
 
-	<p>We saw an improvement across all areas and regions that we tested.</p>
-
-	<p><strong>In some parts of the funnel, the drop off rate was decreased by close to 30%.</strong> <br>People were completing their account registrations more often.</p>
+	<p>We saw an improvement across all areas and regions that we tested.In some parts of the funnel, <strong>the drop-off rate decreased by close to 30%.</strong> People were completing their account registrations more often.</p>
 
 	<img src="/img/skrill/results-full-accounts.png" alt="Results full accounts" class="full">
 
@@ -100,9 +109,11 @@ title: "How we redesigned Skrill's onboarding journey"
 
 	<h2>Lessons learned</h2>
 
-	<p>This experience forced us to look outside of our silos and consider flows more holistically – people don't want to just set up an account and deposit money for the sake of it – they want to do something else outside of our product and our features are just means to an end.</p>
+	<p>This experience forced us to look outside of silos and consider user flows more holistically – people do not want to set up an account and deposit money for the sake of it – they want to do something else outside of our product, and our features are just a means to an end.</p>
 
-	{% include "img/skrill/zoom-out" %}
-	
+	<p>This project inspired us to do diary studies with users and better understand their overall needs for using the Skrill platform.</p>
+
+	<p>Thank you for reading!</p>
+
 </section>
 
