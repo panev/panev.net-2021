@@ -10,6 +10,9 @@
 	--c-purple: #A68EFC;
 	--c-purple-alt: #626FE3;
 
+	--c-green: #27CEB0;
+	--c-green-alt: #0087B2;
+
 	 /* base colours */
 	--c-high: var(--c-purple);
 	--c-diff: var(--c-purple-alt);
@@ -99,6 +102,12 @@ body {
 	padding: 0 var(--v-base);
 }
 
+.cs h3 {
+	justify-self: unset;
+	margin: var(--v-spacious) 0;
+	font-weight: 700;
+}
+
 .cs .visual {
 	margin-top: var(--v-chunky);
 	margin-right: -24px;
@@ -140,7 +149,8 @@ nav.cs-nav > span {
 .cs ul,
 .cs ol,
 .cs h1,
-.cs h2 {
+.cs h2,
+.cs h3 {
 	grid-column: full;
 }
 
@@ -1423,6 +1433,10 @@ footer {
 
 	.cs p + svg, .cs p + img {
 		margin-bottom: var(--v-base);
+	}
+
+	.cs h3 {
+		margin: var(--v-spacious);
 	}
 
 	nav {
