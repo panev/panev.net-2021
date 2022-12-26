@@ -12,20 +12,21 @@ title: "Remodeling the on-prem upgrade process at Hyperscience"
 		
 	</div>
 	<h1>{{ title }}</h1>
-	<p>During my time at Hypesrcience, I had the opportunity to work on improving our upgrade process for on-prem customers.</p>
+
+	<p class="duration-preview">⏱ 6 minute read</p>
 
 	<h2>Overview</h2>
-	<p>At Hyperscience, the on-premise upgrade process for enterprise customers to new versions of our platform was complicated, error-prone and took a very long time.</p>
+	<p>At Hyperscience, the on-premise upgrade process for enterprise customers to new versions of our platform was complicated, error-prone and took a very long time. Our goal was to <strong>reduce the time to value for enterprise customers</strong>.</p>
 
 	<h2>My role</h2>
-	<p>As the product designer working on system integrations – most, but not all of the upgrade experience ownership fell into the teams I was working with.</p>
+	<p>As the senior product designer working on system integrations – most, but not all of the upgrade experience ownership fell into the teams I was working with. I had to:</p>
 	<ul>
-		<li>Map out the entire upgrade process from the perspectives of our customers, our implementation specialists that managed the upgrade process and TSEs that helped with the tactical parts of an upgrade</li>
-		<li>Gather more information on all the different problems customers were experiencing</li>
-		<li>Map out the technical landscape of an upgrade process – was required for our platform to get upgraded, how our machine learning models impacted the whole experience, what were the technical dependencies and challenges on the customer front and how it all fits together</li>
-		<li>Frame the problem clearly and coherently and work with product managers and stakeholders to break it down into manageable projects that each deliver value</li>
-		<li>Facilitate conversations and potential solutions with a multitude of different teams across the company that had overlap with the problem space</li>
-		<li>Design and help ship an MVP solution with a given set of technical and time constraints</li>
+		<li>Map out the entire upgrade process from the perspectives of our customers, our implementation specialists that managed the upgrade process and TSEs that helped with the tactical parts of an upgrade.</li>
+		<li>Gather more information on all the different problems customers were experiencing.</li>
+		<li>Map out the technical landscape of an upgrade process – figure out what was required for our platform to get upgraded, how our machine learning models impacted the whole experience, what were the technical dependencies and challenges on the customer front and how it all fits together.</li>
+		<li>Frame the problem clearly and coherently and work with product managers and stakeholders to break it down into manageable projects that each deliver value.</li>
+		<li>Facilitate conversations and potential solutions with a multitude of different teams across the company that had overlap with the problem space.</li>
+		<li>Design and help ship an MVP solution with a given set of technical and time constraints.</li>
 	</ul>
 
 	<h2>Exploring the on-prem upgrade problem space</h2>
@@ -50,8 +51,8 @@ title: "Remodeling the on-prem upgrade process at Hyperscience"
 	<h3>Talking to Customers</h3>
 	<p>We spoke to a few different personas from the client’s side – Product Managers and Sysadmins – they told us that:</p>
 	<ul>
-		<li>Model training was a cumbersome and extremely difficult process due to them having to do it in a lower environment</li>
-		<li>Model training was a black box – it was unclear how long the trainer needed to run and model compatibility was a mystery</li>
+		<li>Model training was a cumbersome and extremely difficult process due to them having to do it on a lower environment</li>
+		<li>Model training was a black box – it was unclear how long the trainer needed to run for and our model compatibility was a mystery</li>
 		<li>We released too frequently. Hyperscience had a 3-month release cycle, while most of our clients upgraded these types of vendor software once, at most twice a year</li>
 		<li>The immediate value of a newer version was not obvious</li>
 	</ul>
@@ -59,25 +60,25 @@ title: "Remodeling the on-prem upgrade process at Hyperscience"
 	<img src="/img/hs-up/journey-map.png" srcset="/img/hs-up/journey-map@2x.png" 2x alt="Journey map" class="super"> 
 
 	<h2>Approach</h2>
-	<p>After gathering the qualitative information, we synthesised all of our findings in the form of several workshops – that helped us wrap our heads around the different issues and give them some priority.</p>
+	<p>After gathering the qualitative information, we synthesised all of our findings and did several workshops – that helped us wrap our heads around the different issues assign priority.</p>
 	<h3>Ownership and team distribution</h3>
-	<p>The discovered issues fell into the ownership of many teams, so improving the experience meant that several product designers, product managers and engineering leads from different squads had to come together and collaborate on figuring out the best way to solve and implement them.</p>
+	<p>The discovered issues fell into the ownership of many teams, so improving the experience meant that several product designers, product managers and engineering leads from different squads had to come together and collaborate.</p>
 	<h3>Breaking down the problem set</h3>
-	<p>After getting together with different teams, we defined and broke down the problem set into several project initiatives that tackled various pain points.</p>
+	<p>After getting together with the different teams, we defined and broke down the problem set into several project initiatives that tackled various pain points.</p>
 	<img src="/img/hs-up/issues1.png" srcset="/img/hs-up/issues1@2x.png" 2x alt="Journey map" class="super">
 	<h3>Clustering & Prioritization</h3>
 	<img src="/img/hs-up/issues2.png" srcset="/img/hs-up/issues2@2x.png" 2x alt="Journey map" class="super">
 
 	<h2>Forward-compatible models</h2>
 	<p>After we managed to cut up the issues into logical chunks, we figured out that one of the things that would have the most positive impact on our upgrade experience is making our models forward-compatible with newer versions of our platform.</p>
-	<p>I was responsible for designing a way to alleviate a particular pain point – remodelling the experience of our platform so that users could<strong>still use their old machine-learning models after a platform upgrade.</strong> This meant that they would not have to train new models right away.</p>
+	<p>I was responsible for designing a way to alleviate this particular pain point – remodelling the experience of our platform so that users could <strong>still use their old machine-learning models after a platform upgrade.</strong> This meant that they would not have to train new models right away.</p>
 	<h3>A bit of context about the Hyperscience platform</h3>
 	<p>A Flow in Hyperscience is what makes document processing work – it ingests, processes and outputs documents.</p>
 	<img src="/img/hs-up/flows-expl.png" srcset="/img/hs-up/flows-expl@2x.png" 2x alt="Journey map" class="full">
-	<p>Flows are comprised of Blocks that represent a certain step and also feature Releases and Layouts which control the types of documents processed. <br><strong>This is where machine learning models come in</strong>.</p>
+	<p>Flows are comprised of Blocks that represent a certain step. Flows also feature Releases and Layouts which control the types of documents processed. <br><strong>This is where machine learning models come in</strong>.</p>
 	<ul>
 		<li>Models are dependencies of layouts and releases</li>
-		<li>Blocks need models to work</li>
+		<li>(ML) Blocks need models to work</li>
 	</ul>
 	<img src="/img/hs-up/flows-artefacts.png" srcset="/img/hs-up/flows-artefacts@2x.png" 2x alt="Journey map" class="super">
 
@@ -96,25 +97,27 @@ title: "Remodeling the on-prem upgrade process at Hyperscience"
 	<p>Having now a good understanding of the problem and its specifics, I did the following:</p>
 	<ul>
 		<li>Looked closely at which areas of our system and experience this change would impact – Flows, Releases and Model Management</li>
-		<li>Ensured that we signal to users that old/current models still work with the new version of the platform</li>
-		<li>Proposed a feature addition to our Flows space that would expose a “Model Compatibility” feature, that would enable users to see that they need new model versions (perform model training) to work with the newer features (Flows) of our platform</li>
+		<li>Ensured that we signal to users that their old models still work with the new versions of the platform</li>
+		<li>Designed a feature addition to our Flows space that would expose a “Model Compatibility” feature, that would enable users to see that they need new model versions (perform model training) to work with the newer features (Flows) of our platform</li>
 		<li>Eliminate the need to expose and communicate model versions to customers</li>
 		<li>Expose a “Flow Compatibility” feature on the Model page, so users would have information about which Flows a Model can be used in.</li>
 		<li>Establishing a relationship between Flows and Models set up groundwork and development foundations for a future model management space in our platform where users could see and easily manage versions, releases, training data, and compare accuracy.</li>
 	</ul>
+
+	<p>This is what the new workflow would look like: </p>
 
 	<img src="/img/hs-up/solution-hifi-flow.png" srcset="/img/hs-up/solution-hifi-flow@2x.png" 2x alt="Journey map" class="super">
 
 
 	<h2>Outcome</h2>
 	<ul>
-		<li>Deferring the need for model training when performing an upgrade makes breaks the whole process down into manageable phases</li>
-		<li>Clients could upgrade the platform, have uninterrupted document processing (no downtime) with their old models and still benefit from some of the new platform features, <strong>ultimately having reduced time to value</strong> and perform model upgrades at their own time</li>
+		<li>Deferring the need for model training when performing an upgrade breaks the whole process down into manageable phases</li>
+		<li>Clients could upgrade the platform, have uninterrupted document processing (no downtime) with their old models and still benefit from some of the new platform features, <strong>ultimately having reduced time to value</strong> and perform model upgrades later, if and when they need specific new Model features</li>
 		<li>This solution was a small step towards a more coherent model management scheme for our platform</li>
 	</ul>
 
 	<h2>Lessons learned</h2>
-	<p>Cross-team collaboration is very tricky when there is a very broad problem on the table that impacts a multitude of teams – no clear ownership and priority are difficult to set, but when you work hard to break the problem down into manageable chunks of work it becomes easier to tackle.</p>
+	<p>Cross-team collaboration is very tricky when there is a very broad problem on the table that impacts a multitude of teams – no clear ownership and priorities are difficult to set – but when you work to break the problem down into manageable chunks it becomes easier to tackle.</p>
 
 	<p>Thank you for reading!</p>
 		

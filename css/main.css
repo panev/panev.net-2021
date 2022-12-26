@@ -160,6 +160,12 @@ nav.cs-nav > span {
 	margin-bottom: var(--v-base-plus);
 }
 
+.cs .duration-preview {
+	text-align: center;
+	/*font-weight: 700;*/
+	color: var(--c-medi);
+}
+
 /* zoom  */
 
 .zoomable:hover {
@@ -943,7 +949,7 @@ section p {
 }
 
 
-hr{
+hr {
     border-style: dashed none none none;
     margin-top: var(--v-spacious);
     color: var(--c-lite-medi);
@@ -971,9 +977,17 @@ hr{
 
 .more-about {
 	grid-column: cozy;
-	height: 0px;
+	height: 256px;
 	overflow: hidden;
 	transition: 0.5s;
+	position: relative;
+}
+
+.more-about::before {
+	content: '';
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background: linear-gradient(360deg, #FFFFFF 0.26%, rgba(255, 255, 255, 0.825708) 13.1%, rgba(255, 255, 255, 0) 100%);
 }
 
 .more-about p {
@@ -981,8 +995,13 @@ hr{
 }
 
 .hello-section-active .more-about {
-	height: 600px;
+	height: 720px;
 }
+
+.hello-section-active .more-about::before {
+	display: none;
+}
+
 
 .hello-section-active .hello-separator path {
 	stroke: var(--c-diff);
@@ -1489,7 +1508,7 @@ footer {
 	}
 
 	.hello-section-active .more-about {
-		height: 720px;
+		height: 880px;
 	}
 
 	@media screen and (max-width: 320px) {
