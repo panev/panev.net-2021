@@ -169,7 +169,7 @@ if (date.getDay() === 0) {
 
 if (date.getDay() === 1) {
 	document.querySelector('.weekday-greeting')
-	.innerHTML = 'It looks like it\'s Monday today. Happy new week!'
+	.innerHTML = 'It looks like it\'s Monday today.'
 }
 
 if (date.getDay() === 2) {

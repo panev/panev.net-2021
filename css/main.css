@@ -95,6 +95,17 @@ body {
 	text-decoration-style: wavy;
 }
 
+.util-crosshair {
+	position: fixed;
+	top: 40%;
+	height: 100px;
+	/* background: rgba(255,0,0,0.5); */
+	z-index: 9999;
+	left: 0;
+	right: 0;
+}
+
+
 /* case study type, etc */
 
 .cs h1 {
@@ -206,6 +217,7 @@ h3 {
 	color: var(--c-base);
 	margin: var(--v-spacious);
 	font-family: 'PT Serif', 'Helvetica', 'Arial', sans-serif;
+	text-align: center;
 }
 
 p, ul, li {
@@ -959,7 +971,15 @@ hr {
 	grid-column: cozy;
 }
 
+.hello-intro p.highlight {
+	opacity: 1;
+	transform: scale(1);
+}
+
 .hello-intro p {
+	opacity: 0.8;
+	transform: scale(.98);
+	transition: 0.5s;
 	position: relative;
 	margin-bottom: var(--v-spacious);
 }
@@ -1014,12 +1034,13 @@ hr {
 .ribbon-left {
 	grid-column: 2 / span 2;
 	align-self: center;
+	justify-self: end;
 }
 
 .ribbon-right {
     grid-column: 6 / span 2;
 	align-self: center;
-	justify-self: end;
+	justify-self: auto;
 }
 
 

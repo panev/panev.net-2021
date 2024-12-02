@@ -1,5 +1,3 @@
-// Commands and scripts only for the index page
-
 // * NAV LOGIC *
 
 // Binds the nav link elements
@@ -36,7 +34,7 @@ let contactArea = {
 // Check where the scroll is and manage active class
 document.addEventListener("scroll", function(){
 
-	if (window.pageYOffset > helloArea.start && window.pageYOffset < helloArea.end) {
+	if (window.scrollY > helloArea.start && window.scrollY < helloArea.end) {
 
 		if (!helloLink.classList.contains("nav-link-active")) {
 			helloLink.classList.add("nav-link-active")
@@ -45,7 +43,7 @@ document.addEventListener("scroll", function(){
 		}
 	}
 
-	if (window.pageYOffset >= workArea.start && window.pageYOffset < workArea.end) {
+	if (window.scrollY >= workArea.start && window.scrollY < workArea.end) {
 		if (!workLink.classList.contains("nav-link-active")) {
 			helloLink.classList.remove("nav-link-active")
 			workLink.classList.add("nav-link-active")
@@ -54,7 +52,7 @@ document.addEventListener("scroll", function(){
 
 	}
 
-	if (window.pageYOffset >= contactArea.start && window.pageYOffset < contactArea.end) {
+	if (window.scrollY >= contactArea.start && window.scrollY < contactArea.end) {
 		if (!contactLink.classList.contains("nav-link-active")) {
 			helloLink.classList.remove("nav-link-active")
 			workLink.classList.remove("nav-link-active")
